@@ -352,3 +352,13 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 425px){
+    .header{
+        padding: 0;
+    }
+    .headerBackground{
+        width: 500%;
+    }
+    
+}

@@ -39,3 +39,9 @@
 .loginButton:hover, .logo:Hover, .logoutButton:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+    img.logo{
+      height: 4rem;
+    }
+  }
