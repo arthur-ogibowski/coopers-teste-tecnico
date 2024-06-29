@@ -13,7 +13,7 @@ router.post('/register', async (req, res) => {
     let user = await User.findOne({ username });
 
     if (user) {
-      return res.status(400).json({ message: 'Usuário já existe' });
+      return res.status(400).json({ message: 'User already exists' });
     }
 
     // Criar um novo usuário com senha criptografada
@@ -36,8 +36,8 @@ router.post('/register', async (req, res) => {
       res.json({ token });
     });
   } catch (err) {
-    console.error('Erro ao registrar usuário:', err);
-    res.status(500).send('Erro no servidor');
+    console.error('Error registering user:', err);
+    res.status(500).send('Server Error');
   }
 });
 

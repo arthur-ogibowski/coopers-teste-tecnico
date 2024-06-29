@@ -1,11 +1,13 @@
 import axios from 'axios';
 
+const backendUrl = 'https://enigmatic-harbor-98544-3afc102bbefd.herokuapp.com/'
+
 const token = localStorage.getItem('token');
 
 // Função para obter todos os todos
 const getTodos = async () => {
   try {
-    const response = await axios.get('http://localhost:3001/api/todos', {
+    const response = await axios.get(`${backendUrl}api/todos`, {
       headers: { 'x-auth-token': token }, // Define o token de autenticação no cabeçalho da requisição
     });
     return response.data; // Retorna os dados dos todos obtidos da API
@@ -18,7 +20,7 @@ const getTodos = async () => {
 const addTodo = async (title, isNewTodoCompleted) => {
   try {
     const response = await axios.post(
-      'http://localhost:3001/api/todos',
+      `${backendUrl}api/todos`,
       { title, completed: isNewTodoCompleted },
       {
         headers: { 'x-auth-token': token }, // Define o token de autenticação no cabeçalho da requisição
@@ -33,7 +35,7 @@ const addTodo = async (title, isNewTodoCompleted) => {
 // Função para deletar um todo
 const deleteTodo = async (id) => {
   try {
-    await axios.delete(`http://localhost:3001/api/todos/${id}`, {
+    await axios.delete(`${backendUrl}api/todos/${id}`, {
       headers: { 'x-auth-token': token }, // Define o token de autenticação no cabeçalho da requisição
     });
   } catch (error) {
@@ -45,7 +47,7 @@ const deleteTodo = async (id) => {
 const toggleCompleteTodo = async (id, todo) => {
   try {
     const response = await axios.put(
-      `http://localhost:3001/api/todos/${id}`,
+      `${backendUrl}api/todos/${id}`,
       {
         ...todo,
         completed: !todo.completed, // Inverte o status de completo do todo
@@ -64,7 +66,7 @@ const toggleCompleteTodo = async (id, todo) => {
 const updateTodoOrder = async (id, draggedTodo, isCompleted) => {
   try {
     const response = await axios.put(
-      `http://localhost:3001/api/todos/${id}`,
+      `${backendUrl}api/todos/${id}`,
       {
         ...draggedTodo,
         completed: isCompleted, // Define o status de completude do todo conforme especificado
@@ -83,7 +85,7 @@ const updateTodoOrder = async (id, draggedTodo, isCompleted) => {
 const updateTodoTitle = async (id, title) => {
   try {
     const response = await axios.put(
-      `http://localhost:3001/api/todos/${id}`,
+      `${backendUrl}api/todos/${id}`,
       {
         title,
       },
@@ -100,7 +102,7 @@ const updateTodoTitle = async (id, title) => {
 // Função para limpar todos os todos completos ou incompletos
 const clearTodos = async (completed) => {
   try {
-    await axios.delete('http://localhost:3001/api/todos', {
+    await axios.delete(`${backendUrl}api/todos`, {
       headers: { 'x-auth-token': token }, // Define o token de autenticação no cabeçalho da requisição
       params: { completed }, // Define os parâmetros da requisição para limpar todos baseado no status de completude
     });
