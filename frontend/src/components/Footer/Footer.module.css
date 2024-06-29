@@ -1,0 +1,62 @@
+.footer{
+    margin-top: 5.8rem;
+    height: 27rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.background{
+    background-color: var(--color-background-secondary);
+    width: 200%;
+    height: 27rem;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-1deg);
+    bottom: -2rem;
+}
+
+.mainTitle, .secondTitle{
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--color-background);
+}
+
+.mainTitle{
+    margin-bottom: 2.8rem;
+}
+
+.secondTitle{
+    margin-bottom: 1.8rem;
+}
+
+.text{
+    font-family: Montserrat;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-background);
+}
+
+.graphic{
+    width: 51.1rem;
+    height: 4.1rem;
+    background-color: var(--color-primary);
+    z-index: 3;
+    position: absolute;
+    transform: rotate(-1deg);
+    bottom: -1rem;
+}

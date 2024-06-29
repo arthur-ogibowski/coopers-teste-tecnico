@@ -1,0 +1,41 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding-bottom: 5.2rem;
+}
+
+.logo{
+    height: 5rem;
+    transition: 0.1s ease-in-out;
+}
+
+.loginButton {
+  background-color: var(--color-background-secondary);
+  color: var(--color-background);
+  padding: 1rem 4rem;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+  transition: 0.1s ease-in-out;
+}
+
+.logoutButton {
+  background-color: transparent;
+  outline: 2px solid var(--color-background-secondary);
+  color: var(--color-background-secondary);
+  padding: 1rem 4rem;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.1rem;
+  transition: 0.1s ease-in-out;
+}
+
+.loginButton:hover, .logo:Hover, .logoutButton:hover {
+  transform: scale(1.1);
+}

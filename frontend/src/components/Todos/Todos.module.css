@@ -1,0 +1,354 @@
+.todos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.header{
+    height: 42rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18rem;
+    width: 75%;
+}
+.headerBackground{
+    background-color: var(--color-background-secondary);
+    height: 25%;
+    width: 200%;
+    position: absolute;
+    z-index: -2;
+    transform: rotate(-3deg);
+}
+
+.title{
+    font-family: Poppins;
+    font-size: 6rem;
+    font-weight: 600;
+    color: var(--color-background);
+    border-bottom: 4px solid var(--color-primary);
+    width: fit-content;
+    padding-bottom: 0.7rem;
+    height: 20%;
+}
+
+.subtitle{
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: var(--color-background);
+    margin-top: 3.4rem;
+    text-align: center;
+}
+
+.todoLists{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 4rem;
+    justify-content: center;
+    background-color: var(--color-background);
+}
+
+.todoColumn{
+    box-shadow: 0px 4px 12px 0px #42424233;
+    width: 38rem;
+    margin: 2rem;
+    padding: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listHeader{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+
+}
+.listTitle{
+    margin-top: 1.7rem;
+    margin-bottom: 2rem;
+    font-family: Poppins;
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.listSubtitle{
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+}
+.listSubtitleAccent{
+    font-weight: 700;
+}
+
+.incompleteColumn{
+    border-top: 2rem solid var(--color-secondary);
+}
+
+.completeColumn{
+    border-top: 2rem solid var(--color-primary);
+}
+
+.incompleteList, .completeList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.todoItem{
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+    transition: 0.1s ease-in-out;
+    width: 100%;
+}
+
+.incompleteButton{
+    border: 2px solid var(--color-secondary);
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: var(--color-background);
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.incompleteButton img{
+    z-index: -1;
+    position: relative;
+}
+.completeButton{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.addNewButton{
+    border: 2px solid var(--color-todo-new-item);
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: var(--color-background);
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+
+}
+
+.todoText{
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+}
+.addInput{
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+}
+.addInput:focus{
+    outline: none;
+}
+.editingInput{
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-secondary);
+}
+.editingInput:focus{
+    outline: none;
+}
+.deleteButton{
+    margin-left: auto;
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-todo-delete);
+    background-color: transparent;
+    cursor: pointer;
+    visibility: hidden;
+    transition: 0.1s ease-in-out;
+}
+.todoItem:hover .deleteButton{
+    visibility: visible;
+}
+.deleteButton:hover{
+    transform: scale(1.1);
+}
+
+.eraseAllButton{
+    background: var(--color-background-secondary);
+    padding: 1.8rem 10rem;
+    width: max-content;
+    margin: 1.7rem;
+    color: var(--color-background);
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+.eraseAllButton:hover{
+    transform: scale(1.1);
+}
+
+.mockData:first-child .incompleteButton{
+    border-color: var(--color-todo-new-item);
+    background-color: transparent;
+    z-index: 0;
+}
+
+.mockData:first-child span{
+    color: var(--color-background-secondary);
+    font-weight: 700;
+}
+
+.mockData:last-child span{
+    color: var(--color-secondary);
+}
+
+.todoGraphic{
+    position: absolute;
+    left: -8rem;
+    bottom: 20%;
+}
+
+@media screen and (max-width: 1024px){
+    .header{
+        padding: 0 10rem;
+    }
+    .headerBackground{
+        width: 300%;
+    }
+    .title{
+        font-size: 4rem;
+        height: 15%;
+    }
+    .subtitle{
+        font-size: 2rem;
+        margin-top: 2.4rem;
+    }
+    .todoLists{
+        flex-direction: row;
+
+    }
+    .todoColumn{
+        width: 100%;
+        margin: 1rem;
+    }
+    .listHeader{
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+    .listTitle{
+        font-size: 3rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .listSubtitle{
+        font-size: 1.6rem;
+    }
+    .todoItem{
+        margin: 0.8rem 0;
+    }
+    .todoText{
+        font-size: 1.4rem;
+    }
+    .addInput{
+        font-size: 1.4rem;
+    }
+    .editingInput{
+        font-size: 1.4rem;
+    }
+    .deleteButton{
+        font-size: 1rem;
+    }
+    .eraseAllButton{
+        padding: 1.8rem 5rem;
+        margin: 1rem;
+        font-size: 1.6rem;
+    }
+    .todoGraphic{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        padding: 0 5rem;
+    }
+    .headerBackground{
+        width: 400%;
+    }
+    .title{
+        font-size: 3rem;
+        height: 10%;
+    }
+    .subtitle{
+        font-size: 1.8rem;
+        margin-top: 1.7rem;
+    }
+    .todoLists{
+        flex-direction: column;
+    }
+    .todoColumn{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .listHeader{
+        margin-bottom: 1rem;
+    }
+    .listTitle{
+        font-size: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .listSubtitle{
+        font-size: 2.4rem;
+    }
+    .todoItem{
+        margin: 0.6rem 0;
+    }
+    .todoText{
+        font-size: 1.2rem;
+    }
+    .addInput{
+        font-size: 1.2rem;
+    }
+    .editingInput{
+        font-size: 1.2rem;
+    }
+    .deleteButton{
+        font-size: 0.8rem;
+    }
+    .eraseAllButton{
+        padding: 1.8rem 3rem;
+        margin: 0.5rem;
+        font-size: 1.4rem;
+    }
+    .todoGraphic{
+        display: none;
+    }
+}

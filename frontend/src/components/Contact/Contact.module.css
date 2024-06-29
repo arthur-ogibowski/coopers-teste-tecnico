@@ -1,0 +1,164 @@
+.contact{
+    margin-top: 18.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.header{
+    position: absolute;
+    top: -10rem;
+}
+.graphic{
+    width: 17rem;
+    height: 2.3rem;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+}
+
+.headerImage{
+    border-radius: 50%;
+    z-index: 3;
+    position: relative;
+}
+
+.getInTouch{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4rem;
+    margin-top: 2.7rem;
+}
+
+.getInTouchIcon{
+    background-color: var(--color-primary);
+    font-size: 3.2rem;
+    padding: 1.4rem;
+    border-radius: 0.5rem;
+}
+
+.getInTouchTitle{
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-form-text);
+    width: 25%;
+    
+}
+.getInTouchTitleAccent{
+    font-weight: 700;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 16px 0px #06152B14;
+    padding: 6rem;
+    width: 70rem;
+    position: relative;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.4rem;
+    width: 100%;
+}
+
+.formGroup{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.formGroup .formItem{
+    width: 48%;
+}
+
+.label{
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--color-form-text);
+    margin-bottom: 0.8rem;
+}
+.input{
+    border: 1px solid #06152B;
+    border-radius: 0.4rem;
+    padding: 1.6rem;
+}
+.input::placeholder{
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: left;
+    color: var(--color-form-placeholder);
+}
+
+textarea.input{
+    height: 18rem;
+}
+
+.submit{
+    box-shadow: 0px 16px 24px 0px #06152B1F;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1.6rem;
+    font-family: Montserrat;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.submit:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1024px){
+    .graphic{
+        height: 1.5rem;
+    }
+    .form{
+        width: 90%;
+    }
+    .formGroup .formItem{
+        width: 100%;
+    }
+    .getInTouchTitle{
+        width: 25%;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .graphic{
+        height: 1.5rem;
+    }
+    .form{
+        width: 100%;
+    }
+    .formGroup .formItem{
+        width: 100%;
+    }
+    .formGroup{
+        flex-direction: column;
+    }
+    .getInTouchTitle{
+        width: 50%;
+    }
+    
+}

@@ -1,0 +1,28 @@
+.notification {
+  position: fixed;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2rem; /* Start position above the viewport */
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease, top 0.5s ease;
+}
+
+.notification.error {
+  color: #fff;
+  background-color: #e74c3c;
+  border-color: transparent;
+}
+
+.notification.success {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: transparent;
+}

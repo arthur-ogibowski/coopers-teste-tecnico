@@ -1,0 +1,155 @@
+.heroContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7.5rem;
+}
+
+.heroText{
+    width: 50%;
+    text-align: left;
+}
+
+.heroTitle{
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 6.4rem;
+}
+
+.titleSpan{
+    color: var(--color-primary);
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 6.4rem;
+    width: 100%;
+    display: block;
+}
+
+.heroDescription{
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    padding: 5.6rem 0 4.6rem 0;
+}
+
+.heroButton{
+    padding: 1.8rem 5.6rem;
+    border-radius: 1rem;
+    background: var(--color-primary);
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 29.26px;
+    text-align: center;
+    color: var(--color-background);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.heroButton:hover{
+    transform: scale(1.1);
+}
+
+.heroGraphic{
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+.iconScroll{
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1024px){
+    .heroTitle{
+        font-size: 6rem;
+        line-height: 6.4rem;
+    }
+
+    .titleSpan{
+        font-size: 4rem;
+        line-height: 6.4rem;
+    }
+
+    .heroDescription{
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding: 3rem 0 2rem 0;
+    }
+
+    .heroButton{
+        padding: 1.5rem 4rem;
+        font-size: 2rem;
+    }
+
+    .heroGraphic{
+        display: none;
+    }
+
+    .iconScroll{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .heroContent{
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+
+    .heroText{
+        width: 100%;
+        text-align: center;
+    }
+
+    .heroTitle{
+        font-size: 6rem;
+        line-height: 6.4rem;
+    }
+
+    .titleSpan{
+        font-size: 4rem;
+        line-height: 6.4rem;
+    }
+
+    .heroDescription{
+        font-size: 2rem;
+        line-height: 2.4rem;
+        padding: 3rem 0 2rem 0;
+    }
+
+    .heroButton{
+        padding: 1.5rem 4rem;
+        font-size: 2rem;
+    }
+
+    .heroGraphic{
+        display: none;
+    }
+
+    .heroContent{
+        position: relative;
+    }
+
+    .heroText{
+        position: absolute;
+        z-index: 1;
+        color: var(--color-background);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .heroImage{
+        position: relative;
+        filter: contrast(0.3) brightness(0.3);
+        width: 100%;
+    }
+}
