@@ -44,7 +44,7 @@ const AuthModal = ({ show, handleClose, onLoginSuccess, onAuthError, onRegisterS
           <button className={styles.close} onClick={handleModalClose} aria-label="Close modal">Close</button>
           <div className={styles.content}>
             <div className={styles.header}>
-              <img src={authImg} alt="Auth" />
+              <img src={authImg} alt="Auth" className={styles.image} />
               <h1 id="authModalTitle" className={styles.title}>
                 {isLogin ? 'Sign in' : 'Register'}
                 <span className={styles.titleSpan}>

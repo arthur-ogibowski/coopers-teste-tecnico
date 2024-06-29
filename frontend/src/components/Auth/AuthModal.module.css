@@ -195,5 +195,9 @@
     .header{
         flex-direction: column;
     }
+    .image{
+        display: none;
+    }
     
 }
+
